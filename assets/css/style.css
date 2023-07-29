@@ -23,6 +23,32 @@ h1 {
     width: 100%;
 }
 
+.main-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+.main-buttons button {
+    width: 10em;
+    height: 3em;
+    font-size: 2em;
+    border-radius: .5em;
+    background-color: coral;
+}
+
+.game-area {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
