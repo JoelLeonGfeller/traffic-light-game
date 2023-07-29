@@ -89,3 +89,45 @@ h1 {
 #circle3.inactive {
     background-color: rgba(0, 128, 0, 0.526);
 }
+
+#btn1 {
+    padding: 0 20px;
+    border-radius: 50%;
+    background-color: coral;
+    border: 10px solid;
+    width: 150px;
+    height: 150px;
+    font-size: 2.8rem;
+    margin-right: 350px;
+    position: absolute;
+
+
+}
+
+#btn2 {
+    padding: 0 20px;
+    border-radius: 50%;
+    background-color: coral;
+    border: 10px solid;
+    width: 150px;
+    height: 150px;
+    font-size: 2.8rem;
+    margin-left: 350px;
+    position: absolute;
+}
+
+.score-area {
+    margin-top: 30%;
+    margin-right: 0%;
+    color: aliceblue;
+    display: flex;
+    font-size: 30px;
+}
+
+#correct {
+    margin-right: 180px;
+}
+
+#incorrect {
+    margin-left: 40px;
+}
