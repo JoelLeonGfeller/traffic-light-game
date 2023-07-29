@@ -16,15 +16,37 @@
         <h1>Traffic Game!</h1>
     </header>
 
-    <button id="btn1">Wait</button>
-    <button id="btn2">Drive</button>
+    <main>
+
+        <div class="game-area">
+
+            <button id="btn1">Wait</button>
+
+            <div class="container">
+                <div id="circle1" class="circle inactive"></div>
+                <div id="circle2" class="circle inactive"></div>
+                <div id="circle3" class="circle inactive"></div>
+            </div>
+
+            <button id="btn2">Drive</button>
+
+        </div>
+
+        <div class="score-area">
+            <p id="correct" class="scores">Correct Answers <span id="correct-int">0</span></p>
+            <p id="incorrect" class="scores">Incorrect Answers <span id="incorrect-int">0</span></p>
+        </div>
+
+        </div>
+
+        <div class="main-buttons">
+            <button id="start-game">Start Game</button>
+            <button id="read-rules">Rules</button>
+        </div>
+
+    </main>
 
     <script src="assets/js/script.js"></script>
-
-    <div class="score-area">
-        <p id="correct" class="scores">Correct Answers <span id="correct-int">0</span></p>
-        <p id="incorrect" class="scores">Incorrect Answers <span id="incorrect-int">0</span></p>
-    </div>
 
 </body>
 
