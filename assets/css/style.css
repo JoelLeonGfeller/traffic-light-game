@@ -22,3 +22,70 @@ h1 {
     font-size: 100px;
     width: 100%;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+    width: 100px;
+    padding: 20px 0;
+    border-radius: 50px;
+    background-color: #2c3e50;
+    position: absolute;
+}
+
+#circle1 {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+
+}
+
+#circle1.active {
+    background-color: red;
+    box-shadow: 0 0 60px 10px rgba(250, 5, 5, 0.615);
+
+}
+
+#circle1.inactive {
+    background-color: rgba(255, 0, 0, 0.526);
+}
+
+#circle2 {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+
+}
+
+#circle2.active {
+    background-color: yellow;
+    box-shadow: 0 0 60px 10px rgba(255, 255, 0, 0.588);
+
+}
+
+#circle2.inactive {
+    background-color: rgba(255, 255, 0, 0.505);
+}
+
+#circle3 {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+
+}
+
+#circle3.active {
+    background-color: green;
+    box-shadow: 0 0 60px 10px rgba(0, 128, 0, 0.649);
+
+}
+
+#circle3.inactive {
+    background-color: rgba(0, 128, 0, 0.526);
+}
