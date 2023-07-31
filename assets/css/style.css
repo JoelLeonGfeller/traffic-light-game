@@ -142,20 +142,35 @@ h1 {
     position: absolute;
 }
 
-.score-area {
-    margin-top: 30%;
-    margin-right: 0%;
+#btn3 {
+    background-color: cornflowerblue;
+    height: 30px;
+    width: 50px;
+    margin-top: 400px;
+    margin-right: 100px;
+
+}
+
+
+#correct {
+    margin-top: 700%;
+    margin-left: 250%;
+    margin-right: 100%;
     color: aliceblue;
     display: flex;
     font-size: 30px;
-}
 
-#correct {
-    margin-right: 180px;
 }
 
 #incorrect {
-    margin-left: 40px;
+    margin-top: 0%;
+    margin-bottom: 100%;
+    margin-right: 400%;
+    margin-left: 30%;
+    color: aliceblue;
+    display: flex;
+    font-size: 30px;
+
 }
 
 .popup-container {

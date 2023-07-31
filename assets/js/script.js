@@ -107,3 +107,22 @@ document.addEventListener('DOMContentLoaded', () => {
         popupContainer.style.display = 'none';
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const countdownElement = document.getElementById('countdown');
+    let count = 10;
+
+    function updateCountdown() {
+        countdownElement.textContent = count;
+        count--;
+
+        if (count < 0) {
+            countdownElement.textContent = 'Time\'s up!';
+            return;
+        }
+
+        setTimeout(updateCountdown, 1000);
+    }
+
+    updateCountdown();
+});
