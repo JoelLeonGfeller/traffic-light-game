@@ -38,11 +38,34 @@ driveBtn.addEventListener("click", function () {
     }
 });
 
+function toggleCircle(circleId) {
+    const circle = document.getElementById(circleId);
+    if (circle.classList.contains('active')) {
+        circle.classList.remove('active');
+        circle.classList.add('inactive');
+    } else {
+        circle.classList.remove('inactive');
+        circle.classList.add('active');
+    }
+}
+
 
 function randomId() {
     return Math.ceil(Math.random() * 3);
 }
 
+function startGame() {
+    let activeCircle = document.querySelector(".circle.active");
+    if (!activeCircle) {
+        toggleCircle(`circle${currentId}`);
+    }
+    gameInterval = setInterval(() => {
+        toggleCircle(`circle${currentId}`);
+        let newId = randomId();
+        toggleCircle(`circle${newId}`);
+        currentId = newId;
+    }, 1000);
+}
 
 function startGame() {
     let activeCircle = document.querySelector(".circle.active");
