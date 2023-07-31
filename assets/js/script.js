@@ -93,3 +93,17 @@ button.addEventListener("click", () => {
     window.location.reload();
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const readRulesBtn = document.getElementById('read-rules');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    const popupContainer = document.getElementById('popupContainer');
+
+    readRulesBtn.addEventListener('click', () => {
+        popupContainer.style.display = 'block';
+    });
+
+    closePopupBtn.addEventListener('click', () => {
+        popupContainer.style.display = 'none';
+    });
+});
