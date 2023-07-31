@@ -87,3 +87,9 @@ startGameBtn.addEventListener("click", () => {
     gameArea.style.display = "flex";
     startGame();
 })
+
+const button = document.getElementById("btn3")
+button.addEventListener("click", () => {
+    window.location.reload();
+
+});
