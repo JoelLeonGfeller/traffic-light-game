@@ -85,6 +85,7 @@ function startGame() {
 startGameBtn.addEventListener("click", () => {
     buttonsArea.style.display = "none";
     gameArea.style.display = "flex";
+    console.log(gameArea.style.display);
     startGame();
 })
 
@@ -108,21 +109,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const countdownElement = document.getElementById('countdown');
-    let count = 10;
 
-    function updateCountdown() {
-        countdownElement.textContent = count;
-        count--;
+const timerCount = document.getElementById("timer-count");
+let remainingTime = 30;
 
-        if (count < 0) {
-            countdownElement.textContent = 'Time\'s up!';
-            return;
+function startCountdown() {
+    const countdownInterval = setInterval(() => {
+        remainingTime -= 1;
+        timerCount.innerText = remainingTime;
+
+        if (remainingTime <= 0) {
+            clearInterval(countdownInterval);
+            showFinalScore();
         }
+    }, 1000);
+}
 
-        setTimeout(updateCountdown, 1000);
-    }
+function showFinalScore() {
+    clearInterval(gameInterval);
+    gameArea.style.display = "none";
+    buttonsArea.style.display = "flex";
+    alert(`Game Over!\nYour Final Score: Correct - ${correctScore.innerText}, Incorrect - ${incorrectScore.innerText}`);
+}
 
-    updateCountdown();
+
+startGameBtn.addEventListener("click", () => {
+    buttonsArea.style.display = "none";
+    gameArea.style.display = "flex";
+    startGame();
+    startCountdown();
 });
