@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Joel Leon Gfeller">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
     <script src="https://kit.fontawesome.com/958aad9421.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Traffic Game!</title>
@@ -54,17 +57,41 @@
         <div id="popupContainer" class="popup-container">
             <div class="popup-content">
                 <h2>Rules</h2>
-                <p>Hello Player!
-                    In this game you have to drive on green wait on red and yellow and your score will apear on the
-                    bottom of the page, and you can press quit to restart the game.
+                <p>Hello Player!</p>
+                <p>In this game you have to:</p>
+                <ul>
+                    <li>drive on green</li>
+                    <li>wait on red and yellow</li>
+                </ul>
+                <p>Your score will apear on the
+                    bottom of the page, and you can press quit to restart the game.</p>
+                <p>
                     Have fun and enjoy :)
                 </p>
                 <button id="closePopupBtn">Close</button>
             </div>
         </div>
 
+        <div id="end-game-popup" class="popup-container">
+            <div class="popup-content">
+                <h2>Game Over!</h2>
+                <p>
+                    Your Final Score:
+                </p>
+                <p>
+                    Correct - <span id="correct-final"></span>, Incorrect - <span id="incorrect-final"></span>
+                </p>
+                <button id="closeEndPopup">Close</button>
+            </div>
+        </div>
+
 
     </main>
+
+    <footer>
+        <p>Created by &#169; <a href="https://github.com/joelLeonGfeller/" target="_blank" rel="noopener"
+                aria-label="Visit the developer's github account (opens in a new tab)">Joel Leon Gfeller</a>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 

@@ -11,7 +11,6 @@ const gameArea = document.querySelector(".game-area");
 const buttonsArea = document.querySelector(".main-buttons");
 
 const startGameBtn = document.getElementById("start-game");
-const rulesBtn = document.getElementById("read-rules");
 
 // Add the event listener to the button 
 waitBtn.addEventListener("click", function () {
@@ -96,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupContainer = document.getElementById('popupContainer');
 
     readRulesBtn.addEventListener('click', () => {
-        popupContainer.style.display = 'block';
+        popupContainer.style.display = 'flex';
     });
 
     closePopupBtn.addEventListener('click', () => {
@@ -109,13 +108,14 @@ let remainingTime = 30;
 
 function startCountdown() {
     const countdownInterval = setInterval(() => {
-        remainingTime -= 1;
-        timerCount.innerText = remainingTime;
-
-        if (remainingTime <= 0) {
+        if (remainingTime === 0) {
+            timerCount.innerText = "0";
             clearInterval(countdownInterval);
             showFinalScore();
         }
+        remainingTime--;
+        timerCount.innerText = remainingTime;
+
     }, 1000);
 }
 
@@ -123,6 +123,18 @@ function showFinalScore() {
     clearInterval(gameInterval);
     gameArea.style.display = "none";
     buttonsArea.style.display = "flex";
-    alert(`Game Over!\nYour Final Score: Correct - ${correctScore.innerText}, Incorrect - ${incorrectScore.innerText}`);
-    resetGame();
+    const endGamePopup = document.getElementById('end-game-popup');
+    const correctFinal = document.getElementById('correct-final');
+    const incorrectFinal = document.getElementById('incorrect-final');
+    const closeEndPopup = document.getElementById('closeEndPopup');
+    correctFinal.innerText = correctScore.innerText;
+    incorrectFinal.innerText = incorrectScore.innerText;
+
+
+    endGamePopup.style.display = 'flex';
+
+    closeEndPopup.addEventListener("click", () => {
+        endGamePopup.style.display = 'none';
+        resetGame();
+    });
 }
