@@ -19,9 +19,9 @@ waitBtn.addEventListener("click", function () {
     const activeCircle = document.querySelector(".circle.active");
 
     if (activeCircle.id === 'circle1' || activeCircle.id === 'circle2') {
-        correctScore.innerText = parseInt(correctScore.innerText) + 1
+        correctScore.innerText = parseInt(correctScore.innerText) + 1;
     } else {
-        incorrectScore.innerText = parseInt(incorrectScore.innerText) + 1
+        incorrectScore.innerText = parseInt(incorrectScore.innerText) + 1;
     }
 });
 
@@ -30,11 +30,9 @@ driveBtn.addEventListener("click", function () {
     const activeCircle = document.querySelector(".circle.active");
 
     if (activeCircle.id === 'circle3') {
-        correctScore.innerText = parseInt(correctScore.innerText) + 1
-
+        correctScore.innerText = parseInt(correctScore.innerText) + 1;
     } else {
-        incorrectScore.innerText = parseInt(incorrectScore.innerText) + 1
-
+        incorrectScore.innerText = parseInt(incorrectScore.innerText) + 1;
     }
 });
 
@@ -49,22 +47,21 @@ function toggleCircle(circleId) {
     }
 }
 
-
 function randomId() {
     return Math.ceil(Math.random() * 3);
 }
 
-function startGame() {
-    let activeCircle = document.querySelector(".circle.active");
-    if (!activeCircle) {
-        toggleCircle(`circle${currentId}`);
+function resetGame() {
+    clearInterval(gameInterval);
+    remainingTime = 30;
+    timerCount.innerText = remainingTime;
+    correctScore.innerText = "0";
+    incorrectScore.innerText = "0";
+    currentId = randomId();
+    const activeCircle = document.querySelector(".circle.active");
+    if (activeCircle) {
+        toggleCircle(activeCircle.id);
     }
-    gameInterval = setInterval(() => {
-        toggleCircle(`circle${currentId}`);
-        let newId = randomId();
-        toggleCircle(`circle${newId}`);
-        currentId = newId;
-    }, 1000);
 }
 
 function startGame() {
@@ -79,20 +76,18 @@ function startGame() {
         currentId = newId;
     }, 1000);
 }
-
-// startGame();
 
 startGameBtn.addEventListener("click", () => {
     buttonsArea.style.display = "none";
     gameArea.style.display = "flex";
-    console.log(gameArea.style.display);
     startGame();
-})
+    startCountdown();
+});
 
-const button = document.getElementById("btn3")
-button.addEventListener("click", () => {
+const quitGameBtn = document.getElementById("btn3");
+quitGameBtn.addEventListener("click", () => {
+    resetGame();
     window.location.reload();
-
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -108,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
         popupContainer.style.display = 'none';
     });
 });
-
 
 const timerCount = document.getElementById("timer-count");
 let remainingTime = 30;
@@ -130,12 +124,5 @@ function showFinalScore() {
     gameArea.style.display = "none";
     buttonsArea.style.display = "flex";
     alert(`Game Over!\nYour Final Score: Correct - ${correctScore.innerText}, Incorrect - ${incorrectScore.innerText}`);
+    resetGame();
 }
-
-
-startGameBtn.addEventListener("click", () => {
-    buttonsArea.style.display = "none";
-    gameArea.style.display = "flex";
-    startGame();
-    startCountdown();
-});
