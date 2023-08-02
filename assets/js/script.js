@@ -4,8 +4,12 @@ const driveBtn = document.getElementById("btn2");
 let gameInterval;
 let currentId = randomId();
 
+// Get references to score elements for correct and incorrect scores
+
 const correctScore = document.getElementById("correct-int");
 const incorrectScore = document.getElementById("incorrect-int");
+
+// Get references to game and buttons areas
 
 const gameArea = document.querySelector(".game-area");
 const buttonsArea = document.querySelector(".main-buttons");
@@ -34,6 +38,8 @@ driveBtn.addEventListener("click", function () {
         incorrectScore.innerText = parseInt(incorrectScore.innerText) + 1;
     }
 });
+
+// Functions to toggle circles' states and generate a random traffic light ID
 
 function toggleCircle(circleId) {
     const circle = document.getElementById(circleId);

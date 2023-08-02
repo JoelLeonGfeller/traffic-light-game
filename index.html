@@ -1,23 +1,30 @@
+<!-- The DOCTYPE and basic HTML structure -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding, viewport, and description -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Traffic light game where you wait and drive on the appropriate color">
+    <!-- Meta tags for keywords and author -->
     <meta name="keywords" content="HTML,CSS,JavaScript,Traffic-light-game">
     <meta name="author" content="Joel Leon Gfeller">
+    <!-- Link to the website favicon and external fontawesome icons -->
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
     <script src="https://kit.fontawesome.com/958aad9421.js" crossorigin="anonymous"></script>
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Title for the page -->
     <title>Traffic Game!</title>
 </head>
 
 <body>
-
+    <!-- Header section with the game title -->
     <header>
         <h1>Traffic Game!</h1>
     </header>
+    <!-- Main game area containing elements for the timer, traffic light buttons, and score area -->
     <main>
         <div class="game-area">
 
@@ -48,12 +55,12 @@
 
 
         </div>
-
+        <!-- Main buttons section with buttons to start the game and read the rules -->
         <div class="main-buttons">
             <button id="start-game">Start Game</button>
             <button id="read-rules">Rules</button>
         </div>
-
+        <!-- Popup containers for the game rules and the end-game popup -->
         <div id="popupContainer" class="popup-container">
             <div class="popup-content">
                 <h2>Rules</h2>
@@ -87,12 +94,12 @@
 
 
     </main>
-
+    <!-- Footer section with the developer's information -->
     <footer>
         <p>Created by &#169; <a href="https://github.com/joelLeonGfeller/" target="_blank" rel="noopener"
                 aria-label="Visit the developer's github account (opens in a new tab)">Joel Leon Gfeller</a>
     </footer>
-
+    <!-- JavaScript script tag to link to the external JS file -->
     <script src="assets/js/script.js"></script>
 
 </body>

@@ -27,13 +27,13 @@ Traffic game is a website traffic light game for people of all ages to get to kn
 ![Screenshot of title](assets/images/title-light-game.jpg)
 
 ### Start button
-- is located under the heading and apears only before the game starts or when game is quited, and is there to launch the game.
+- Is located under the heading and apears only before the game starts or when game is quited, and is there to launch the game.
 
 
 ![Screenshot of start button](assets/images/start-btn.jpg)
 
 ### Rules 
-- same as for the start button the rules button only apears before or after the game. Its there to get a better understanding about the game and how to play it.
+- Same as for the start button the rules button only apears before or after the game. Its there to get a better understanding about the game and how to play it.
 
 
 ![Screenshot of rules button](assets/images/rules-btn.jpg)![Screenshot of clicked rules](assets/images/rules-clicked.jpg)
@@ -79,4 +79,60 @@ Traffic game is a website traffic light game for people of all ages to get to kn
 - A quit button is provided for the player at the bottom of the page to restart or quit the game at any time.
 
 
-![Screenshot of quit button](assets/images/quit-game.jpg) 
+![Screenshot of quit button](assets/images/quit-game.jpg)
+
+## Testing
+---
+- I tested that this page work in different browsers: Chrome, Firefox & Microsoft Edge.
+- I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the DevTools device toolbar.
+- I confirmed that the websites text is all readeable and easy to understand.
+
+### Validation Testing
+
+- HTML
+
+![Screenshot of html validation](assets/images/html-validation.jpg)
+
+- CSS
+
+![Screenshot of css validatin](assets/images/css-validation.jpg)
+
+
+- JavaScript
+
+The warnings can be ignored.
+
+![Screenshot of js validation1](assets/images/js-validatin1.jpg)
+
+
+![Screenshot of js validatin2](assets/images/ja-validatin2.jpg)
+
+
+![Screenshot of js validation3](assets/images/js-validaton3.jpg)
+
+
+- Accessibility
+
+I confirmed that the colors and fonts chosen are easy to read and accessible by running lighthouse in DevTools.
+
+![Screenshot of the lighthouse](assets/images/lighthouse.jpg)
+
+
+
+## Deployment
+
+---
+
+The site was deployed to GitHub pages. The steps to deploy are:
+- In the GitHub repository, navigate to the Settings tab.
+- From the source section drop-down menu, select the Master Branch.
+- Once the Master Branch has been selected, the page provided the link to the completed website.
+
+
+The live link can be found here - [Traffic Game](https://joelleongfeller.github.io/traffic-light-game/)
+
+## credits
+---
+My father gave me the idea to make a traffic game and the container traffic light was taken from Youtube the link to the video can be found here - [The video](https://www.youtube.com/watch?v=8vagi0PJbM0&t=200s)
+
+

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
 
+/* General CSS styles applied to the whole page */
+
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +9,8 @@
     font-family: 'Handjet', sans-serif;
 
 }
+
+/* CSS styles for various elements used in the game */
 
 
 body {
@@ -258,6 +262,8 @@ h1 {
     margin-bottom: 15%;
 
 }
+
+/* CSS styles for the responsive design */
 
 
 @media screen and (max-width: 450px) {
